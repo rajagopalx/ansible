@@ -1,7 +1,7 @@
 - name: List Drives
-  hosts: windows
+  hosts: {{hosts}}
   tasks:
-     - name: Changing DNS
+     - name: Retriving Drives
        raw: wmic logicaldisk get name
        register: result
      - debug:
