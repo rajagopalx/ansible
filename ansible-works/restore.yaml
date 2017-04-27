@@ -3,5 +3,5 @@
   tasks:
      - name: Restoring Files
        win_copy:
-        src: "/home/naanal/files/{{ ansible_host }}/{{drive}}:/"
+        src: "{{src_path}}{{ ansible_host }}/{{drive}}:/"
         dest: "{{drive}}:/"
