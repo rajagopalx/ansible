@@ -1,7 +1,7 @@
 ## How to copy files from windows using ansible ?
 
 To ping windows,
-  `ansible windows i hosts -m win_ping`
+  `ansible windows -i hosts -m win_ping`
 
 To List drives,
 
