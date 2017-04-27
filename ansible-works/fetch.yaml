@@ -5,5 +5,5 @@
        script: list_files.ps1 "{{drive}}"
        register: files_to_copy
      - name: Fetching files
-       fetch: src={{item}} dest=/home/naanal/files/
+       fetch: src={{item}} dest={{dest}}
        with_items: "{{ files_to_copy.stdout_lines }}"
