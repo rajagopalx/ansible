@@ -9,7 +9,7 @@ To List drives,
 
 To Fetch Files from windows,
 
-  `ansible-playbook -i hosts fetch.yaml --extra-vars "hosts=windows drive=E"`
+  `ansible-playbook -i hosts fetch.yaml --extra-vars "hosts=windows drive=E dest=/home/naanal/somefolder"`
 
 To Restore Files to windows,
 
