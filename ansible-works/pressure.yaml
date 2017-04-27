@@ -1,0 +1,9 @@
+- name: test raw module
+  hosts: '{{hosts}}'
+  strategy: free
+  tasks:
+    - name: Consuming Resource
+      raw: c:\PressureService.exe -console
+      async: 50000
+      poll: 5000
+

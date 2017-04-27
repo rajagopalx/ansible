@@ -1,0 +1,6 @@
+- name: check IP Address
+  hosts: '{{hosts}}'
+  strategy: free
+  tasks:
+    - name: create schedule
+      raw: schtasks /Create /TN Python /RU LOCALSERVICE /SC ONSTART /TR  C:\cons.py

@@ -1,0 +1,7 @@
+- name: Adding to AD
+  hosts: '{{hosts}}'
+  tasks:
+     - name: Changing DNS
+       raw: netsh advfirewall firewall set rule group="network discovery" new enable=yes
+     - name: Shutting off
+       raw: shutdown -r -f

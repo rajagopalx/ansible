@@ -1,0 +1,9 @@
+- name: Fetching file from remote to local
+  hosts: "{{hosts}}"
+  tasks:
+     - name: Get Files of "{{drive}}" directory using powershell
+       script: list_files.ps1 "{{drive}}"
+       register: files_to_copy
+     - name: Fetching files
+       fetch: src={{item}} dest=/home/naanal/files/
+       with_items: "{{ files_to_copy.stdout_lines }}"

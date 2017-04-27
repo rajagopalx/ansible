@@ -1,0 +1,9 @@
+- name: Adding to AD
+  hosts: '{{hosts}}'
+  tasks:
+     - name: Changing DNS
+       raw: netsh interface ipv4 add dnsserver 'Local Area Connection' address='{{dns}}' index=1
+     - name: Adding to Domian
+       script: jointodomain.ps1
+     - name: Shutting off
+       raw: shutdown -r -f

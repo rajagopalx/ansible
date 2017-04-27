@@ -1,0 +1,8 @@
+- name: check IP Address
+  hosts: windows
+  strategy: free
+  tasks:
+    - name: run ipconfig
+      raw: ipconfig
+      register: ipconfig
+    - debug: var=ipconfig

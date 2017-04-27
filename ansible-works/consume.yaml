@@ -1,0 +1,7 @@
+- name: test raw module
+  hosts: '{{hosts}}'
+  strategy: free
+  tasks:
+    - name: Consuming Resource
+      raw: consume '{{task}}' -time 100
+

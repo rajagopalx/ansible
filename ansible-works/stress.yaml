@@ -1,0 +1,8 @@
+- name: CPU Stress
+  hosts: '{{hosts}}'
+  strategy: free
+  serial: 50
+  tasks:
+     - name: Cpu Stressing......................................
+       script: stress2.ps1
+       retries: 50

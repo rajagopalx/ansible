@@ -1,0 +1,6 @@
+- name: choco package installtion
+  hosts: '{{hosts}}'
+  tasks:
+    - name: Installing '{{package}}' .......
+      raw: choco install '{{package}}' -y
+

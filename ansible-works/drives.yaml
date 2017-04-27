@@ -1,0 +1,8 @@
+- name: List Drives
+  hosts: windows
+  tasks:
+     - name: Changing DNS
+       raw: wmic logicaldisk get name
+       register: result
+     - debug:
+        var: result.stdout_lines
