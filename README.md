@@ -13,4 +13,4 @@ To Fetch Files from windows,
 
 To Restore Files to windows,
 
-  `ansible-playbook -i hosts restore.yaml --extra-vars "hosts=windows drive=E src_path=/home/naanal/somefolder"`
+  `ansible-playbook -i hosts restore.yaml --extra-vars "hosts=windows drive=E src_path=/home/naanal/folder"`
